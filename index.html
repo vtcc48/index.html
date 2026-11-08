@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NameScope</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="top-bar">
+
+        <h1>🔍 NameScope</h1>
+
+        <button class="theme-btn" onclick="toggleTheme()">
+            🌙 Dark Mode
+        </button>
+
+    </div>
+
+    <p class="subtitle">
+        Search public social media profiles using a name or username.
+    </p>
+
+    <!-- Controls -->
+
+    <div class="controls">
+
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+        </select>
+
+        <select onchange="changeThemeColor(this.value)">
+            <option value="#2563eb">Blue</option>
+            <option value="#16a34a">Green</option>
+            <option value="#9333ea">Purple</option>
+            <option value="#dc2626">Red</option>
+        </select>
+
+    </div>
+
+    <!-- Search Fields -->
+
+    <input
+        type="text"
+        id="name"
+        placeholder="Enter Full Name">
+
+    <input
+        type="text"
+        id="username"
+        placeholder="Enter Username">
+
+    <input
+        type="text"
+        id="city"
+        placeholder="Enter City (Optional)">
+
+    <select id="country">
+
+        <option>🇧🇭 Bahrain</option>
+        <option>🇸🇦 Saudi Arabia</option>
+        <option>🇦🇪 UAE</option>
+        <option>🇶🇦 Qatar</option>
+        <option>🇰🇼 Kuwait</option>
+        <option>🇴🇲 Oman</option>
+        <option>🇪🇬 Egypt</option>
+        <option>🇯🇴 Jordan</option>
+        <option>🇺🇸 United States</option>
+        <option>🇬🇧 United Kingdom</option>
+
+    </select>
+
+    <!-- Buttons -->
+
+    <button
+        class="search-btn"
+        onclick="searchProfiles()">
+        🔎 Search
+    </button>
+
+    <button
+        class="clear-btn"
+        onclick="clearResults()">
+        🗑 Clear Results
+    </button>
+
+    <!-- Statistics -->
+
+    <p id="counter">
+        Searches: 0
+    </p>
+
+    <!-- Results -->
+
+    <div id="results"></div>
+
+    <hr>
+
+    <!-- History -->
+
+    <h2>📜 Search History</h2>
+
+    <ul id="history"></ul>
+
+    <hr>
+
+    <!-- About -->
+
+    <div class="info-box">
+
+        <h2>📖 About NameScope</h2>
+
+        <p>
+            NameScope is an educational OSINT tool that helps users
+            locate publicly available profiles and information
+            using advanced search methods.
+        </p>
+
+    </div>
+
+    <!-- Responsible Use -->
+
+    <div class="info-box">
+
+        <h2>🛡 Responsible Use</h2>
+
+        <p>
+            This website only searches publicly available information.
+            It does not access private accounts or bypass security.
+            Users should always respect privacy and platform rules.
+        </p>
+
+    </div>
+
+    <hr>
+
+    <!-- Live Clock -->
+
+    <p id="datetime"></p>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            Created by Ahmed Eid | NameScope 2026
+        </p>
+
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
